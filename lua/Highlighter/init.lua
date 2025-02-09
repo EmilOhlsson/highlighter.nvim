@@ -55,7 +55,7 @@ local function generate_color(buffer_id)
 end
 
 function M.setup(config)
-    if config.debug then
+    if config and config.debug then
         -- Set debug function to become a print
         debug = function(msg) print(msg) end
     end
